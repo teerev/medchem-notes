@@ -111,8 +111,8 @@ CCC(C)CC    (3-methyl pentane)
 
 Cis and trans bonds:
 
-/\ : cis bonds  
-// : trans bonds
+/\ : cis bonds 
+// : trans bonds  
 
 e.g. 
 
@@ -124,5 +124,39 @@ F/C=C/F (trans-1,2-difluorethylene)
 
 ## Section 2
 
-### PUBCHEM
+Three main databases:
+
+PubChem, ZINC, ChemSpider.
+
+### PubChem
+
+Filters for search include:
+compounds, substances, pathways, bioassays, literature, patents.
+
+Contents:
+1. structures
+2. names and identifiers
+3. chemical and physical properties
+4. spectra
+5. related records
+6. vendors
+7. drug and medication information
+8. pharmacology and biochemistry
+9. use and manufacturing
+10. identification
+11. safety and hazards
+12. toxicity
+
+
+
+
+
+
+
+
+
+
+
+
+
 
