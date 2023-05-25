@@ -209,7 +209,7 @@ The **Ẍ is the H bond acceptor**, in the sense that it's "accepting" the X-H b
 
 The **X-H is the H bond donor**, in the sense that it's donating the bond to the Ẍ.
 
-````bash
+```
 
 GPT-4's take on it:
 
@@ -239,7 +239,7 @@ Reactive groups: Certain chemical groups can react with cellular molecules, lead
 hERG inhibition: Molecules that inhibit the hERG potassium ion channel can cause cardiac toxicity.
 Please note that these are rough guidelines and many successful drugs do not fit all these criteria. In addition, the importance of each descriptor can vary depending on the specific drug and target in question. Drug discovery involves a complex interplay of these and many other factors.
 
-````
+```
 
 ### Molinspiration / SwissADME
 
