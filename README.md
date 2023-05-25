@@ -120,11 +120,9 @@ F/C=C\F (cis-1,2-difluorethylene)
 F/C=C/F (trans-1,2-difluorethylene)
 
 
-
-
 ## Section 2
 
-Three main databases:
+Three large databases:
 
 PubChem, ZINC, ChemSpider.
 
@@ -146,6 +144,134 @@ Contents:
 10. identification
 11. safety and hazards
 12. toxicity
+13. disorders and diseases
+14. literature
+15. patents
+16. biomolecular interactions and pathways
+17. biological test results
+18. classification
+19. information sources
+
+Some types of chemical structure:
+
+cyclics, polycyclics, amino acids, furanoses, pyranoses, nucleotides
+
+
+### ZINC
+
+Physical/chemical features include:
+
+mwt, logP, mol formula, rings, heavy atoms, hetero atoms, fraction sp3, pH range, net charge, H-bond donors, H-bond acceptors, tPSA, rotatable bonds, apolar desolvation, polar desolvation
+
+
+### ChemSpider
+
+As above - lots of filters and info.
+
+
+
+
+
+## Section 3: ADME(T)
+
+- Administration
+- Distribution
+- Metabolism
+- Excretion
+- (Toxicity)
+
+### Bioavailability descriptors
+
+Example descriptor values of a drug that relate to ADME from Lipinski et al.:
+
+- molecular weight <= 500g/mol
+- hydrogen bond acceptors <= 10
+- hydrogen bond donors <= 6
+- logP < 5
+
+This is the **Rule of 5** (because these four quantities are divisible by 5). Lots of drugs satisfy the rule of 5 but not all.
+
+logP is a measure of hydrophilicity. Drugs can't be too hydrophobic.
+
+"Rule of 5" is one of the filters in PubChem.
+
+Two more descriptors that relate to bioavailability / absorption:
+
+- TPSA (total polar surface area). Ideally less than 140 Angstrom)^2 for good absorption.
+- ROTB (number of rotatable) bonds. < 10 rotatable bonds for good oral bioavailability.
+
+<u>*Notes on (inter- and intra-) molecular hydrogen bonding:</u>*
+    Carbon that's covalently bonded to Hydrogen is not particularly electronegative, whereas when H is bonded to F, N or N (denote them X), these latter three are quite electronegative. This means that X-C bonds are dipoles, and bond with other, similar dipoles on other molecules. e.g. intermolecular bonds F-H-F, O-H-N, etc.
+
+Hydrogen bonds are asymmetric. The Hydrogen in the X-H covalent bond has its electron density pulled towards X due to X's electronegativity, resulting in a partial positive charge on the H atom. This H atom can then be attracted to a lone pair of electrons on an electronegative Ẍ atom (which has a partial negative charge), forming a hydrogen bond.
+
+The **Ẍ is the H bond acceptor**, in the sense that it's "accepting" the X-H bond for hydrogen bonding.
+
+The **X-H is the H bond donor**, in the sense that it's donating the bond to the Ẍ.
+
+````bash
+
+GPT-4's take on it:
+
+Can you provide me with a cheat sheet that rougly summarises the various descriptors (such as molecular weight <= 500mg/mol) for molecules in drug discovery, and how these descriptors relate to the various considerations in the ADMET framework?
+
+ChatGPT
+Sure, here is a high-level cheat sheet for some key considerations for drug-like molecules within the ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) framework. These considerations help scientists in the early stages of drug discovery evaluate the potential of a compound to become a successful drug.
+
+Absorption and Distribution
+
+Molecular Weight: Typically, drug-like molecules have a molecular weight of ≤ 500 g/mol. This relates to absorption and distribution as smaller molecules are generally more readily absorbed and can more easily reach their target in the body.
+Lipophilicity (LogP)
+
+This is a measure of a drug's solubility in fat compared to water. A LogP of around 2 - 5 is generally desirable for a drug candidate. Too lipophilic (high LogP) can lead to poor solubility and issues with absorption and distribution, while too hydrophilic (low LogP) might result in rapid renal excretion and a lack of penetration across lipid membranes, thus impacting absorption and distribution.
+Polar Surface Area (PSA) and Number of Hydrogen Bond Donors/Acceptors
+
+These descriptors relate to a molecule's ability to form hydrogen bonds. A high PSA or a high number of hydrogen bond donors/acceptors can reduce a molecule's ability to cross cell membranes, which can affect absorption and distribution. The "Rule of 5" suggests that molecules with a PSA of ≤140 Å², ≤5 hydrogen bond donors, and ≤10 hydrogen bond acceptors are more likely to have good oral bioavailability.
+Metabolism
+
+Cytochrome P450 enzymes: Molecules that are substrates for these enzymes can be metabolized more quickly, reducing their effective concentration. Molecules that inhibit these enzymes can cause drug-drug interactions.
+Excretion
+
+Size and polarity: Larger, more polar molecules are more likely to be excreted in the urine.
+Toxicity
+
+Reactive groups: Certain chemical groups can react with cellular molecules, leading to toxicity.
+hERG inhibition: Molecules that inhibit the hERG potassium ion channel can cause cardiac toxicity.
+Please note that these are rough guidelines and many successful drugs do not fit all these criteria. In addition, the importance of each descriptor can vary depending on the specific drug and target in question. Drug discovery involves a complex interplay of these and many other factors.
+
+````
+
+### Molinspiration / SwissADME
+
+These packages have lots of functionality. For e.g. can calculate bioactivity scores based on a SMILES code:
+
+Bioactivity scores for OC=CSc2cc1cnccc1cc2O:
+
+GPCR ligand:-0.28
+ion channel modulator: 0.20
+kinase inhibitor: -0.04
+nuclear receptor ligand -0.33
+protease inhibitor: -0.31
+enzyme inhibitor: 0.14
+
+Such scores indicate that this molecule is likely an enzyme inhibitor and ion channel modulator, but not a protease inhibitor, etc.
+
+Can also calculate physicochemical properties and ADME paramaters, pharmacokinetic properties etc.
+
+### Pro-Tox-II
+
+Theoretical prediction of chemical toxicity endpoints such as acute toxicity, hepatoxicity, cytotoxicity, carcinogenicity, mutagenicity, immunotoxicity, etc. Good for reducing *in vivo* experiments.
+
+Toxicity classes:
+
+Class I: fatal if swallowed (LD50 <= 5mg/kg)
+Class II: fatal if swallowed (5mg/kg < LD50 <= 50mg/kg)
+Class III: toxic if swallowed (50mg/kg < LD50 <= 300mg/kg)
+Class IV: harmful if swallowed (300mg/kg < LD50 <= 2000mg/kg)
+Class V: may be harmful if swallowed (2000mg/kg < LD50 <= 5000mg/kg)
+Class VI: non-toxic (LD50 > 5000mg/kg)
+
+## Section 4: Structure and biological activity
 
 
 
