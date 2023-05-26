@@ -52,9 +52,9 @@ Types of drug:
 
 ### Units of biological activity
 
-Concentrations are measured in units of ml/mL, (micro)g/mL, ng/mL, pg/mL. Those with lower concentrations usually have high biological activity, and vice versa.
+Concentrations are measured in units of mg/mL, (micro)g/mL, ng/mL, pg/mL. Those with lower concentrations usually have high biological activity, and vice versa.
 
-Biological activity is also measured in **molarity** (moles of solute per litre of solution).
+Concentration is also measured in **molarity** (moles of solute per litre of solution).
 
 **IC50 **- means the concentration (e.g. 2.5 mg/mL) needed to kill half the population of organisms exposed (e.g. bacteria in an in vitro experiment).
 
@@ -184,11 +184,9 @@ Example descriptor values of a drug that relate to ADME from Lipinski et al.:
 - molecular weight <= 500g/mol
 - hydrogen bond acceptors <= 10
 - hydrogen bond donors <= 6
-- logP < 5
+- logP (lipophilicity) < 5
 
 This is the **Rule of 5** (because these four quantities are divisible by 5). Lots of drugs satisfy the rule of 5 but not all.
-
-logP is a measure of hydrophilicity. Drugs can't be too hydrophobic.
 
 "Rule of 5" is one of the filters in PubChem.
 
@@ -275,7 +273,7 @@ Four approaches to making structural modifications in drug candidates:
 1. fragment-based approach
 2. combinatorial library
 3. peptidomimetics
-4. iososterism
+4. isosterism
 
 ### Combinatorial library approach
 
